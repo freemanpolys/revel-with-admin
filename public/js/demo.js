@@ -5,7 +5,7 @@ var skin = function(color) {
 	if(color == 'default') return;
 	$("head").append($("<link/>", {
 		rel: 'stylesheet',
-		href: '../dist/css/skins/' + color + '.css',
+		href: '/public/css/skins/' + color + '.css',
 		id: 'skin-css'
 	}));
 }
@@ -31,4 +31,5 @@ $(".demo-toggle-skin").each(function(i) {
 	 	skin(_this.attributes.title.nodeValue.toLowerCase().replace(/ /g, ''));
 	});
  });
+
 

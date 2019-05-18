@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" name="viewport">
-  <title>Examples &rsaquo; Login &mdash; Stisla</title>
-
-  <link rel="stylesheet" href="/public/modules/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/public/modules/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="/public/modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
-
-  <link rel="stylesheet" href="/public/css/demo.css">
-  <link rel="stylesheet" href="/public/css/style.css">
-</head>
-
-<body>
+{{set . "title" "Log In"}}
+{{template "header-scripts.html" .}}
 <div id="app">
   <section class="section">
     <div class="container mt-5">
@@ -76,18 +62,4 @@
     </div>
   </section>
 </div>
-
-<script src="/public/modules/jquery.min.js"></script>
-<script src="/public/modules/popper.js"></script>
-<script src="/public/modules/tooltip.js"></script>
-<script src="/public/modules/bootstrap/js/bootstrap.min.js"></script>
-<script src="/public/modules/nicescroll/jquery.nicescroll.min.js"></script>
-<script src="/public/modules/moment.min.js"></script>
-<script src="/public/modules/scroll-up-bar/dist/scroll-up-bar.min.js"></script>
-<script src="/public/js/sa-functions.js"></script>
-
-<script src="/public/js/scripts.js"></script>
-<script src="/public/js/custom.js"></script>
-<script src="/public/js/demo.js"></script>
-</body>
-</html>
+{{template "footer-scripts.html" .}}

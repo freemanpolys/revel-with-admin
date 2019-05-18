@@ -24,4 +24,12 @@ func (c Admin) Index() revel.Result {
 	return c.Render()
 }
 
+func (c Admin) Table() revel.Result {
 
+	return c.Render()
+}
+
+func (c Admin) ChartJs() revel.Result {
+
+	return c.Render()
+}
