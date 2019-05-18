@@ -1,9 +1,8 @@
 package controllers
 
 import (
-	"github.com/revel/revel"
-
 	"github.com/revel/examples/booking/app/routes"
+	"github.com/revel/revel"
 )
 
 type Admin struct {
