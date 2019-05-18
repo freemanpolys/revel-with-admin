@@ -6,4 +6,5 @@ func init() {
 	revel.InterceptMethod(Application.AddUser, revel.BEFORE)
 	revel.InterceptMethod(Application.AutoMigrate, revel.BEFORE)
 	revel.InterceptMethod(Admin.checkUser, revel.BEFORE)
+	revel.InterceptMethod(Application.setCurrentUser, revel.BEFORE)
 }

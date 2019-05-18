@@ -8,7 +8,6 @@ import (
 type Admin struct {
 	Application
 }
-
 func (c Admin) checkUser() revel.Result {
 	if user := c.connected(); user == nil {
 		c.Flash.Error("Please log in first")
@@ -18,7 +17,6 @@ func (c Admin) checkUser() revel.Result {
 }
 
 func (c Admin) Index() revel.Result {
-	c.ViewArgs["currentUrl"] = c.Action
 	c.Log.Info("Fetching index")
 
 
@@ -26,13 +24,10 @@ func (c Admin) Index() revel.Result {
 }
 
 func (c Admin) Table() revel.Result {
-	c.ViewArgs["currentUrl"] = c.Action
 
 	return c.Render()
 }
 
 func (c Admin) Chart() revel.Result {
-	c.ViewArgs["currentUrl"] = c.Action
-
 	return c.Render()
 }

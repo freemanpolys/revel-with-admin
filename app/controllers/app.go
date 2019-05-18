@@ -12,6 +12,11 @@ type Application struct {
 	gormc.TxnController
 }
 
+func (c Application) setCurrentUser () revel.Result {
+	c.ViewArgs["currentUrl"] = c.Action
+	return nil
+}
+
 func (c Application) AutoMigrate() revel.Result {
 
 	c.Txn.AutoMigrate(&models.User{})
