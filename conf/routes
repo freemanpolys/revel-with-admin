@@ -29,4 +29,4 @@ GET     /public/*filepath                       Static.Serve("public")
 POST    /login                                  Application.Login
 GET     /logout                                 Application.Logout
 
-GET     /panel                                 Admin.Index
+GET     /console                                 Admin.Index
