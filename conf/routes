@@ -32,4 +32,4 @@ GET     /logout                                 Application.Logout
 
 GET     /console                                 Admin.Index
 GET     /table                                 Admin.Table
-GET     /chart                                 Admin.ChartJs
+GET     /chart                                 Admin.Chart

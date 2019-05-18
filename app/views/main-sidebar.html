@@ -16,8 +16,8 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="active">
-                <a href="/console"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
+            <li class="{{active_menu .currentUrl "Admin.Index"}}">
+                <a href="{{url "Admin.Index"}}"><i class="ion ion-speedometer"></i><span>Dashboard</span></a>
             </li>
 
             <li class="menu-header">Components</li>
@@ -38,11 +38,11 @@
                     <li><a href="flag.html"><i class="ion ion-ios-circle-outline"></i> Flag</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="/table"><i class="ion ion-clipboard"></i><span>Tables</span></a>
+            <li class="{{active_menu .currentUrl "Admin.Table"}}">
+                <a href="{{url "Admin.Table"}}"><i class="ion ion-clipboard"></i><span>Tables</span></a>
             </li>
-            <li>
-                <a href="/chart"><i class="ion ion-stats-bars"></i><span>Chart.js</span></a>
+            <li class="{{active_menu .currentUrl "Admin.Chart"}}">
+                <a href="{{url "Admin.Chart"}}"><i class="ion ion-stats-bars"></i><span>Chart.js</span></a>
             </li>
             <li>
                 <a href="simple.html"><i class="ion ion-ios-location-outline"></i><span>Google Maps</span></a>

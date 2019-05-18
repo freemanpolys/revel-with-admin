@@ -95,6 +95,16 @@ func init() {
 
 	*/
 
+	revel.TemplateFuncs["active_menu"] = func(url string, menu string) string {
+		var state = "no-active"
+		//log.Println("=========== url =====",url)
+		//log.Println("=========== menu =====",menu)
+		if url == menu {
+			state = "active"
+		}
+		return state
+	}
+
 }
 
 // HeaderFilter adds common security headers
