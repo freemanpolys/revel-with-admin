@@ -33,3 +33,10 @@ GET     /logout                                 Application.Logout
 GET     /console                                 Admin.Index
 GET     /table                                 Admin.Table
 GET     /chart                                 Admin.Chart
+GET     /components                                 Admin.Components
+GET     /general                                 Admin.General
+GET     /buttons                                 Admin.Buttons
+GET     /toastr                                 Admin.Toastr
+GET     /fontawesome                                 Admin.Fontawesome
+GET     /icon-icons                                 Admin.IconIcons
+GET     /credits                                 Admin.Credits

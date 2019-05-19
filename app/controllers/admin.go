@@ -31,3 +31,34 @@ func (c Admin) Table() revel.Result {
 func (c Admin) Chart() revel.Result {
 	return c.Render()
 }
+
+
+
+func (c Admin) General() revel.Result {
+	return c.Render()
+}
+
+func (c Admin) Components() revel.Result {
+	return c.Render()
+}
+
+
+func (c Admin) Buttons() revel.Result {
+	return c.Render()
+}
+
+func (c Admin) Toastr() revel.Result {
+	return c.Render()
+}
+
+func (c Admin) Fontawesome() revel.Result {
+	return c.Render()
+}
+
+func (c Admin) IconIcons() revel.Result {
+	return c.Render()
+}
+
+func (c Admin) Credits() revel.Result {
+	return c.Render()
+}
