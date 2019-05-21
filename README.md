@@ -1,4 +1,11 @@
 # Welcome to Revel
+### Required packages
+go get -u github.com/jinzhu/gorm
+
+go get -u golang.org/x/crypto/bcrypt
+
+go get -u github.com/mattn/go-sqlite3
+
 
 A high-productivity web framework for the [Go language](http://www.golang.org/).
 

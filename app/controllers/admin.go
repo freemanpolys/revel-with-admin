@@ -1,13 +1,14 @@
 package controllers
 
 import (
-	"github.com/revel/examples/booking/app/routes"
+	"revel-with-admin/app/routes"
 	"github.com/revel/revel"
 )
 
 type Admin struct {
 	Application
 }
+
 func (c Admin) checkUser() revel.Result {
 	if user := c.connected(); user == nil {
 		c.Flash.Error("Please log in first")
@@ -18,7 +19,6 @@ func (c Admin) checkUser() revel.Result {
 
 func (c Admin) Index() revel.Result {
 	c.Log.Info("Fetching index")
-
 
 	return c.Render()
 }
@@ -32,8 +32,6 @@ func (c Admin) Chart() revel.Result {
 	return c.Render()
 }
 
-
-
 func (c Admin) General() revel.Result {
 	return c.Render()
 }
@@ -41,7 +39,6 @@ func (c Admin) General() revel.Result {
 func (c Admin) Components() revel.Result {
 	return c.Render()
 }
-
 
 func (c Admin) Buttons() revel.Result {
 	return c.Render()
