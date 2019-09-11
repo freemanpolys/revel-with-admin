@@ -3,7 +3,7 @@ package controllers
 import (
 	"github.com/revel/revel"
 
-	"github.com/revel/examples/booking/app/routes"
+	"akhosto/app/routes"
 )
 
 type Admin struct {

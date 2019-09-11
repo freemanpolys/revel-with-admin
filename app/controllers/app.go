@@ -4,8 +4,8 @@ import (
 	gormc "github.com/revel/modules/orm/gorm/app/controllers"
 	"github.com/revel/revel"
 	"golang.org/x/crypto/bcrypt"
-	"revel-with-admin/app/models"
-	"revel-with-admin/app/routes"
+	"akhosto/app/models"
+	"akhosto/app/routes"
 )
 
 type Application struct {
