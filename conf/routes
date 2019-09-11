@@ -31,3 +31,6 @@ POST    /login                                  Application.Login
 GET     /logout                                 Application.Logout
 
 GET     /panel                                 Admin.Index
+GET     /chart-js                              Admin.ChartsChartjs
+GET     /icons                                 Admin.ElementsIcons
+GET     /buttons                                 Admin.ElementsButtonsStandard

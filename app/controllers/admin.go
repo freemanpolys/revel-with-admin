@@ -25,3 +25,17 @@ func (c Admin) Index() revel.Result {
 }
 
 
+func (c Admin) ChartsChartjs() revel.Result {
+	return c.Render()
+}
+
+
+func (c Admin) ElementsButtonsStandard() revel.Result {
+	return c.Render()
+}
+
+func (c Admin) ElementsIcons() revel.Result {
+	return c.Render()
+}
+
+
