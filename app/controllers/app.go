@@ -1,11 +1,14 @@
 package controllers
 
 import (
+	"fmt"
+	"github.com/jinzhu/gorm"
 	gormc "github.com/revel/modules/orm/gorm/app/controllers"
 	"github.com/revel/revel"
 	"golang.org/x/crypto/bcrypt"
-	"revel-with-admin/app/models"
 	"revel-with-admin/app/routes"
+	"sms-engine/app/models"
+	"strings"
 )
 
 type Application struct {
@@ -34,7 +37,9 @@ func (c Application) AddUser() revel.Result {
 
 func (c Application) connected() *models.User {
 	if c.ViewArgs["user"] != nil {
-		return c.ViewArgs["user"].(*models.User)
+		user := c.ViewArgs["user"].(*models.User)
+		SetSchema(c.Txn,strings.ToLower(user.Username))
+		return user
 	}
 	if username, ok := c.Session["user"]; ok {
 		return c.getUser(username.(string))
@@ -124,4 +129,11 @@ func (c Application) Logout() revel.Result {
 func (c Application) About() revel.Result {
     c.ViewArgs["Msg"]="Revel Speaks"
 	return c.Render()
+}
+
+
+func  SetSchema(dbconn *gorm.DB, schema string) {
+	dbconn.Exec(fmt.Sprintf("CREATE  SCHEMA IF NOT EXISTS %s;", schema))
+	dbconn.Exec(fmt.Sprintf("SET search_path TO %s;", schema))
+	dbconn.AutoMigrate(&models.GroupLabel{})
 }

@@ -1,36 +1,27 @@
-{{set . "title" "Home"}}
-{{template "header.html" .}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<div class="container">
-  <div class="row">
-    <div class="span6">
-      {{template "flash.html" .}}
-    </div>
-  </div>
-</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <title>Signin</title>
 
-<div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Tabs Titles -->
+  <link href="/public/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/public/css/signin.css" rel="stylesheet">
+</head>
+<body class="text-center">
+<form class="form-signin" action="/login" method="POST">
+  <img class="mb-4" src="/public/img/sms-icon.png" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+  <label for="inputLogin" class="sr-only">Login</label>
+  <input type="text" id="inputLogin" class="form-control" name="username" placeholder="Login" required="" autofocus="" />
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="" autocomplete="off" />
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2019 - Akouendy</p>
+</form>
 
-    <!-- Icon -->
-    <div class="fadeIn first">
-      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-    </div>
 
-    <!-- Login Form -->
-    <form action="/login" id="formLogin" method="POST" >
-      <input type="text" name="username" size="19" />
-      <input type="password" name="password" size="19"/>
-      <input type="checkbox" name="remember" value="true"/>
-      <input type="submit" class="fadeIn fourth" value="Log In">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
-    </div>
-
-  </div>
-</div>
-{{template "footer.html" .}}
+</body></html>

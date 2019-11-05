@@ -1,9 +1,10 @@
 package controllers
 
 import (
+	"sms-engine/app/models"
+	"sms-engine/app/routes"
 	"github.com/revel/revel"
 
-	"github.com/revel/examples/booking/app/routes"
 )
 
 type Admin struct {
@@ -19,6 +20,10 @@ func (c Admin) checkUser() revel.Result {
 }
 
 func (c Admin) Index() revel.Result {
+	var label  models.GroupLabel
+	label.Name = "Tesrrrrr"
+
+	c.Txn.Debug().Save(&label)
 	c.Log.Info("Fetching index")
 
 	return c.Render()
